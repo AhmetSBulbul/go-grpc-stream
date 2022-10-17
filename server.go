@@ -43,6 +43,8 @@ func (s *commsServiceServer) SendMessage(msgStream protos.CommsService_SendMessa
 		return err
 	}
 
+	fmt.Printf("Message received: %v \n", msg)
+
 	ack := protos.MessageAck{Status: "OK"}
 	msgStream.SendAndClose(&ack)
 

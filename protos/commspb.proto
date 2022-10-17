@@ -5,8 +5,8 @@ package commspb;
 option go_package = "github.com/AhmetSBulbul/go-grpc-stream/protos";
 
 service CommsService {
-    rpc JoinChannel(Channel) returns (stream Message) {}
-    rpc SendMessage(stream Message) returns (MessageAck) {}
+    rpc JoinChannel(Channel) returns (stream Message);
+    rpc SendMessage(stream Message) returns (MessageAck);
 }
 
 message Channel {
