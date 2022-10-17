@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package commspb;
+
+option go_package = "github.com/AhmetSBulbul/go-grpc-stream/protos";
+
+service CommsService {
+    rpc JoinChannel(Channel) returns (stream Message) {}
+    rpc SendMessage(stream Message) returns (MessageAck) {}
+}
+
+message Channel {
+    string channel_id = 1;
+}
+
+message Message {
+    Channel channel = 1;
+    string message = 2;
+}
+
+message MessageAck {
+    string status = 1;
+}
+
