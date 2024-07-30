@@ -15,3 +15,8 @@ make install
 ```bash
 make run
 ```
+
+### Generate Protos
+```bash
+make gen
+```
