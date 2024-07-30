@@ -1,5 +1,7 @@
 # Go Grpc Stream
 
+Simple Demo to explore grpc streams with go and python.
+
 ## Get Started
 
 ### Install
